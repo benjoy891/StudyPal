@@ -1,1 +1,149 @@
-<h1>Welcome</h1>
+{% extends "base.html" %} 
+{% block title %} Home Page {% endblock %}
+{% block head %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+ {% block body %} 
+ {% load static %}
+ 
+    <section class="blue-section">
+            <h3><strong>Ask questions, gain <span style="color: #007bff;">knowledge.</span><br>Take notes as you go.<br>Cement your <span style="color: #007bff;">knowledge.</span></strong></h3>
+            <h5>Get access to your own personal research assistant who can answer any questions <br>for you in an instant.</h5><br>
+            <a href="#" class="section-button">Get Started</a><br><br><br>
+            <div class="video-container">
+                <iframe width="80%" height="450" src="https://www.youtube.com/embed/0Sh7S-24pH4" frameborder="0" allowfullscreen></iframe>
+            </div>          
+    </section>  
+        <section class="core-features">
+            <h2><b>Core Features</b></h2>
+            <div class="feature-images">
+                <div class="feature">
+                    <img src="{% static 'img/feature1.png' %}" alt="Feature 1" style="border-radius: 10px;">
+                    <h3><strong>Ask questions</strong></h3>
+                    <span>Turn your PDFs into a study buddy and ask questions according to your study flow</span>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'img/feature2.png' %}" alt="Feature 2">
+                    <h3><strong>Take Notes</strong></h3>
+                    <span>Take direct notes from your studies to use as later reference</span>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'img/feature3.png' %}" alt="Feature 3">
+                    <h3><strong>Practise</strong></h3>
+                    <span>Put your knowledge to the test with our private AI viva instructor</span>
+                </div>
+            </div><br><br>
+            <div class="exaplanation">
+                <h4><b>The only way to learn is to ask questions</b></h4>
+                <span>Enagage in a 1:1 conversation with any paper.</span><br><br>
+                <div class="video-container">
+                    <iframe width="80%" height="450" src="https://www.youtube.com/embed/0Sh7S-24pH4" frameborder="0" allowfullscreen></iframe>
+                </div>      
+                <h4><b>Take direct notes as you go</b></h4>
+                <span>Add the answers to your personal note section for future references.</span><br><br>
+                <div class="video-container">
+                    <iframe width="80%" height="450" src="https://www.youtube.com/embed/0Sh7S-24pH4" frameborder="0" allowfullscreen></iframe>
+                </div>     
+                <h4><b>Practise, Practise and Practise</b></h4>
+                <span>Enagage in a viva session that sharpens your knowledge on the subject. <br>AI will asses your response based on the quality of your perfomance.</span><br><br>
+                <div class="video-container">
+                    <iframe width="80%" height="450" src="https://www.youtube.com/embed/0Sh7S-24pH4" frameborder="0" allowfullscreen></iframe>
+                </div>            
+            </div>
+        </section>
+        
+        <section class="box-section">
+            <h3>Fit all your needs</h3>
+            <div class="box-pair">
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/atomic.png' %}">
+                    <h4>Research Papers</h4>
+                    <p>StudyPal simplifies the process, allowing you to effortlessly navigate from class papers to systematic reviews, enabling thorough analysis and comparison of diverse viewpoints across academic literature.</p>
+                </div>
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/legal.png' %}">
+                    <h4>Legal Documents</h4>
+                    <p>Simplify the complexities of legal jargon with StudyPal! Access all the answers you need from your legal documents effortlessly, streamlining your understanding of the law.</p>
+                </div>
+            </div>
+            <div class="box-pair">
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/settings.png' %}">
+                    <h4>User Manuels</h4>
+                    <p>Feeling stuck? Unsure about a particular step or how it fits into the bigger picture? No worries! StudyPal is here to assist you in finding the missing pieces and providing the guidance you need.</p>
+                </div>
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/finance.png' %}">
+                    <h4>Financial Papers</h4>
+                    <p>Conquer the complexity of financial documents fearlessly! StudyPal simplifies the process, helping you decode 10-Ks, 10-Qs, 8-Ks, Form 3, 4, 5, and beyond to find the answers you need.</p>
+                </div>
+            </div>
+            <div class="box-pair">
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/book.png' %}">
+                    <h4>Books</h4>
+                    <p>Unlock the power of StudyPal, your ultimate reading companion! Never read alone again as StudyPal helps summarize forgotten parts and explain missed details, enriching your reading journey.</p>
+                </div>
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="{% static 'img/desk.png' %}">
+                    <h4>Study Materials</h4>
+                    <p>Simplify complex concepts, summarize lessons, and extract crucial points effortlessly, ensuring effective retention and understanding of your material.</p>
+                </div>
+            </div>
+            <h3 id="head"><b>Try it once</b></h3>
+            <h5>Experience talking to a PDF like a study buddy.</h5>
+            <h4 id="text"><b>No upfront payment or credit card required.</b></h4>
+            <button class="section-button">Get started for free</button>
+        </section>
+
+        <section class="testimonial-section">
+          <div class="container">
+              <h2>What our customers have to say</h2>
+              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <!-- Indicators -->      
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+                      </div>
+                      <div class="carousel-item">
+                          <h4>"One word...c WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+                      </div>
+                      <div class="carousel-item">
+                          <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+                      </div>
+                  </div>
+      
+                  <!-- Left and right controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span style="color: #007bff;">&#11164;</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span style="color: #007bff;">&#11166;</span>
+                  </button>
+              </div>
+          </div>
+      </section>
+      {% endblock %}
+      
+        {% block script %}
+        <script>
+            // Initialize the carousel
+            var myCarousel = document.getElementById('myCarousel');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 10000, // Set the interval time (in milliseconds)
+                wrap: true // Loop through the slides
+            });
+        </script>
+        {% endblock %}                                   
+ 

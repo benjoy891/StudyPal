@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}
+  About
+{% endblock %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+{% block body %}
+  <header class="bg text-white text-center py-5" id="head">
+    <div class="container">
+        <h1>About Us</h1>
+        <p class="lead">StudyPal is your <span style="color: #007bff;">free solution</span> to interact with your PDFs like never before.<br>
+          Our service allows you to chat with any uploaded PDF, enabling you to quickly find the information you need<br>
+          without having to scroll through pages of text.</p>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">           
+            <section class="my-5 text-center">
+                <h2 class="mb-4">How It Works</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-upload fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Upload your PDF</h5>
+                                <p class="card-text">Simply upload your PDF document to our platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-comments fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Ask questions</h5>
+                                <p class="card-text">Type in your questions or keywords into the chat interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-reply fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Get answers</h5>
+                                <p class="card-text">Receive instant responses based on the content of your PDF.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="my-5 text-center">
+                <h2 class="mb-4">Why Choose StudyPal?</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body">
+                                <i class="fas fa-check-circle fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Free to Use</h5>
+                                <p class="card-text">StudyPal is completely free with no hidden charges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body">
+                                <i class="fas fa-user-friends fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Easy to Use</h5>
+                                <p class="card-text">Our user-friendly interface makes it easy for anyone to interact with their PDFs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body">
+                                <i class="fas fa-clock fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Time-Saving</h5>
+                                <p class="card-text">Quickly find the information you need without wasting time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body">
+                                <i class="fas fa-bullseye fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Accurate</h5>
+                                <p class="card-text">Our advanced algorithms ensure accurate and relevant responses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="my-5 text-center">
+                <h2 class="mb-4">Get Started</h2>
+                <p class="mb-4">Ready to revolutionize the way you study? <a href="#" class="btn btn-primary btn-lg">Sign up now</a> and start chatting with your PDFs for free!</p>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

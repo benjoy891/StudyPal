@@ -1,0 +1,44 @@
+{% extends "base.html "%}
+{% block title %}Contact{% endblock %}
+{% block head %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+<h3>Contact Us</h3><br>
+
+<div class="container mt-3">
+    <form method="post">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Name" name="name" required>
+        </div>
+        <div class="col">
+          <input type="email" class="form-control" placeholder="Email" name="email" required>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col">
+          <input type="tel" class="form-control" placeholder="Phone number" name="number">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Enter Subject" name="subject">
+        </div>
+      </div><br>
+      <div class="row">
+        <textarea name="message" id="message" placeholder="Write your message here........" required style="border-color: lightgrey;"></textarea>
+      </div><br>
+      <div class="row">
+        <div class="col text-center">
+          <input type="submit" class="button" value="Send Message">
+        </div>
+      </div>        
+    </form>
+</div>
+<br>
+<br>
+
+{% endblock %}

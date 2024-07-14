@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<nav>
+    <img src="{% static 'img/H.png' %}" alt="StudyPal">
+    <div class="center-links">
+        <a href="{% url 'home' %}" class="links">Home</a>
+        <a href="{% url 'contact' %}" class="links">Contact</a>
+        <a href="{% url 'about' %}" class="links">About</a>
+    </div>
+    <div class="right-links">
+        <a href="{% url 'login' %}" class="links">Login</a>
+        <a href="{% url 'signup' %}" class="links" id="sign">Sign-up</a>
+    </div>
+</nav>

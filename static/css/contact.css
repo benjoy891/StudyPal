@@ -1,0 +1,30 @@
+
+
+h3 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #174270;
+}
+
+#message{
+    border-radius: 15px;
+    height: 30vh;
+    border-color: #fafafa;
+}
+
+.button{
+    background: #0073ee;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #eff0f2;
+    color: #fafafa;
+    transition: background-color 0.3s;
+}
+.button:hover{
+    background-color: #fafafa;
+    color: #333;
+    border-color: #333;
+}
+

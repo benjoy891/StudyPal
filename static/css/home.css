@@ -1,0 +1,263 @@
+
+
+/* Style for section button */
+.section-button {
+color: #fafafa;
+background: #174270;
+padding: 15px 20px;
+border-radius: 15px;
+transition: background-color 0.3s;
+text-decoration: none;
+}
+
+.section-button:hover {
+color: #333;
+background: #eff0f2;
+border: #333;
+text-decoration: none;
+}
+
+/* Style for blue link */
+/* base.css (or your custom CSS file) */
+
+/* base.css (or your custom CSS file) */
+
+.blue-section {
+    background-color: #0056b3; /* Background color #0056b3 */
+    color: #fff; /* Text color white */
+    padding: 80px 0; /* Padding for top and bottom spacing */
+    text-align: center; /* Center-align text */
+}
+
+.blue-section h3, .blue-section h5 {
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.blue-section .section-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.blue-section .section-button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.blue-section .blue-link {
+    color: #fff; /* Link color white */
+    text-decoration: none; /* Remove underline */
+}
+
+.blue-section .blue-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.video-container {
+    margin-top: 40px; /* Top margin for spacing */
+    width: 80%; /* Set iframe width to 80% */
+    margin: 0 auto; /* Center-align the video container */
+}
+
+.video-container iframe {
+    width: 100%; /* Full width iframe */
+    height: 450px; /* Fixed height for iframe */
+    border-radius: 20px;
+}
+/* Core features */
+
+.core-features {
+text-align: center;
+padding: 50px;
+background-color: #fafafa;
+}
+
+.core-features h2 {
+color: #174270;
+margin-bottom: 60px;
+margin-top: 40px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.core-features h3 {
+color: #174270;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+.feature-images {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.feature {
+flex: 0 1 30%; /* Adjust the width of each feature */
+margin: 10px;
+text-align: center;
+overflow: hidden;
+}
+
+.feature img {
+width: 100%; /* Set the width to 100% */
+height: 250px; /* Set a fixed height */
+object-fit: contain; /* Maintain aspect ratio */
+margin-bottom: 10px;
+}
+
+
+
+
+.core-features span {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin-top: 20px;
+}
+
+.core-features h4 {
+color: #174270;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin-bottom: 10px;
+margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+.feature-images {
+flex-direction: column;
+}
+
+.feature {
+flex: 0 1 100%;
+margin: 10px 0;
+}
+}
+
+.box-section {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color:#174270 ;
+}
+
+.box-section h3 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+color: #fafafa;
+margin-top: 50px;
+margin-bottom: 70px;
+font-weight: bold;
+}
+
+.box-pair {
+display: flex;
+justify-content: center;
+margin-bottom: 20px; /* Spacing between rows */
+}
+
+.box {
+position: relative;
+width: 520px; /* Increase the width */
+height: 230px; /* Increase the height */
+background-color: #fafafa; /* Background color */
+border: 1px solid #ccc; /* Border */
+border-radius: 10px; /* Rounded corners */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+margin: 0 10px; /* Spacing between boxes */
+overflow: hidden; /* Ensure the entire box is clickable */
+transform: transform 0.5s ease;
+}
+
+.box:hover{
+transform: scale(1.05);
+}
+
+.box a {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+text-decoration: none; /* Remove default link styling */
+}
+
+.box h4 {
+position: absolute;
+color: #174270; /* Text color */
+padding-left: 110px;
+padding-top: 40px;
+
+}
+.box img {
+position: absolute;
+width: 70px;
+height: 70px;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.box p{
+padding-top: 120px;
+padding-left: 20px;
+padding-right: 20px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14px;
+}
+
+@media (max-width: 768px) {
+.box-pair {
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    width: 400px; /* Adjusted width for mobile view */
+    height: 250px; /* Adjusted height for mobile view */
+    margin: 5px 0; /* Spacing between boxes in mobile view */
+}
+.box h4 {
+    font-size: 20px; /* Decrease font size for mobile view */
+}
+}
+#text{
+color: #fff;
+margin-bottom: 40px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#head{
+margin-bottom: 30px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+}
+
+.box-section h5{
+color: #fff;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box-section button{
+margin-bottom: 90px;
+}
+
+/* testimonials */
+/* Custom CSS for Testimonials Carousel */
+
+.testimonial-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    margin-bottom: 40px;
+}
+
+.carousel-item h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.carousel-item span {
+    display: block;
+    font-style: normal;
+    color: #6c757d;
+}
