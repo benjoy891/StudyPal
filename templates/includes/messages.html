@@ -16,9 +16,24 @@
 </div>
 {% endif %}
 
+
+
+{% block style %}
+<style>
+/* CSS for the transition effect */
+.alert {
+    opacity: 1;
+    transition: opacity 1s ease-out; /* Adjust the transition duration as needed */
+}
+
+.alert.fade-out {
+    opacity: 0;
+}
+</style>
+{% endblock %}
+
+
 {% block script %}
-
-
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
     // Select all alert elements
@@ -27,15 +42,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     alerts.forEach(function(alert) {
         // Set timeout for 3 seconds (3000 ms)
         setTimeout(function() {
-            // Remove the 'show' class which triggers the fade out
-            alert.classList.remove('show');
+            // Add the 'fade-out' class which triggers the fade out
+            alert.classList.add('fade-out');
             // After the transition duration, remove the alert from the DOM
             alert.addEventListener('transitionend', function() {
                 alert.remove();
             });
-        }, 4000); // 3000 milliseconds = 3 seconds
+        }, 3000); // 3000 milliseconds = 3 seconds
     });
 });
 </script>
-
 {% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+{% endblock %}
+{% block body %}
+{% include 'includes/messages.html' %}
+<div class="profile-container mt-5">
+    <h2>User Profile</h2>
+    <form method="post" action="{% url 'user_profile' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="first_name">First Name:</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}">
+        </div>
+        <div class="form-group mt-3">
+            <label for="last_name">Last Name:</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3" id="sign">Update Profile</button>
+    </form>
+
+    <h3 class="mt-5">Change Password</h3>
+    <form method="post" action="{% url 'change_password' %}">
+        {% csrf_token %}
+        <div class="form-group mt-3">
+            <label for="old_password">Old Password:</label>
+            <input type="password" class="form-control" id="old_password" name="old_password" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="new_password">New Password:</label>
+            <input type="password" class="form-control" id="new_password" name="new_password" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="confirm_password">Confirm New Password:</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3" id="sign">Change Password</button>
+    </form>
+</div>
+<br><br>
+{% endblock %}

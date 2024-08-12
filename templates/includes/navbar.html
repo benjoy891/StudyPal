@@ -1,5 +1,25 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+
+{% if user.is_authenticated %}
+<nav>
+    <img src="{% static 'img/H.png' %}" alt="StudyPal">
+    <div class="center-links">
+        <a href="{% url 'user_profile' %}" class="links">Profile</a>
+        <a href="{% url 'user_contact' %}" class="links">Contact</a>
+        <a href="#" class="links">Notes</a>
+    </div>
+    <div class="right-links">
+        <a href="{% url 'user_dashboard' %}" class="links"><i class="fa fa-tachometer"></i> Dashboard</a>
+        <a href="javascript:{document.getElementById('logout').submit()}" class="links" id="sign"><i class="fa fa-sign-out"></i> Logout</a>
+        <form action="{% url 'logout' %}" id="logout" method="POST">
+            {% csrf_token %}                            
+            <input type="hidden">
+        </form>
+    </div>
+</nav>
+{% else %}
 <nav>
     <img src="{% static 'img/H.png' %}" alt="StudyPal">
     <div class="center-links">
@@ -8,7 +28,8 @@
         <a href="{% url 'about' %}" class="links">About</a>
     </div>
     <div class="right-links">
-        <a href="{% url 'login' %}" class="links">Login</a>
-        <a href="{% url 'signup' %}" class="links" id="sign">Sign-up</a>
+        <a href="{% url 'login' %}" class="links"><i class="fa fa-sign-in"></i> Login</a>
+        <a href="{% url 'signup' %}" class="links" id="sign"><i class="fa fa-user"></i> Sign-up</a>
     </div>
 </nav>
+{% endif %}

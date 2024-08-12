@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Upload and View PDF{% endblock %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+{% include 'includes/messages.html' %}
+<div class="top-container">
+    <div class="pdf-upload-section">
+        <form id="pdfForm" class="pdf-upload-form" enctype="multipart/form-data">
+            <div class="upload-controls">
+                <label for="fileUpload" class="upload-label">Choose a PDF file:</label>
+                <input type="file" id="fileUpload" name="file" accept=".pdf" required>
+                <button type="submit">Upload PDF</button>
+            </div>
+        </form>
+    </div>
+    <div class="chat-section">
+        <div id="chatContainer" class="chat-container">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type a message..." required>
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.getElementById('pdfForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        
+        fetch('{% url "pdf_data" %}', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('pdfText').innerText = data.text || 'No text extracted';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    document.getElementById('sendMessage').addEventListener('click', function() {
+        const chatInput = document.getElementById('chatInput');
+        const message = chatInput.value.trim();
+        if (message) {
+            const chatContainer = document.getElementById('chatContainer');
+            
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('chat-message', 'user-message');
+            userMessage.textContent = message;
+            chatContainer.appendChild(userMessage);
+
+            // Simulate bot response for demonstration purposes
+            setTimeout(() => {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('chat-message', 'bot-message');
+                botMessage.textContent = 'Bot response: ' + message;
+                chatContainer.appendChild(botMessage);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 500);
+
+            chatInput.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+    });
+</script>
+{% endblock %}

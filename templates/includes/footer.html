@@ -1,34 +1,52 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
-  <footer class="footer">
-     <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Developed By</h4>
-          <ul>
-            <li style="color: gainsboro;">FutureSync AI<br>@futuresync.ai<br><br> Follow for more <br>free tools and updations</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>company</h4>
-          <ul>
-            <li><a href="{% url 'about' %}">about us</a></li>
-            <li><a href="{% url 'contact' %}">contact</a></li>
-            <li><a href="{% url 'login' %}">login</a></li>
-            <li><a href="{% url 'signup' %}">register</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Developed By</h4>
+        <ul>
+          <li style="color: gainsboro;">
+            FutureSync AI<br>
+            @futuresync.ai<br><br>
+            Follow for more<br>
+            free tools and updates
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        {% if user.is_authenticated %}
+        <ul>
+          <li><a href="{% url 'user_profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+          <li><a href="{% url 'user_contact' %}"><i class="fa fa-envelope"></i> Contact</a></li>
+          <li><a href="#"><i class="fa fa-sticky-note"></i> My Notes</a></li>
+          <li><a href="javascript:{document.getElementById('logout').submit()}" rel="noopener"><i class="fa fa-sign-out"></i> Logout</a>
+            <form action="{% url 'logout' %}" id="logout" method="POST">
+              {% csrf_token %}
+              <input type="hidden">
+            </form>
+          </li>
+        </ul>
+        {% else %}
+        <ul>
+          <li><a href="{% url 'about' %}"><i class="fa fa-info-circle"></i> About Us</a></li>
+          <li><a href="{% url 'contact' %}"><i class="fa fa-envelope"></i> Contact</a></li>
+          <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a></li>
+          <li><a href="{% url 'signup' %}"><i class="fa fa-user"></i> Register</a></li>
+        </ul>
+        {% endif %}
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" rel="noopener"><i class="fab fa-twitter"></i></a>
+          <a href="#" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="#" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-     </div>
-  </footer>
-
+    </div>
+  </div>
+</footer>
